@@ -20,11 +20,15 @@ Nodes include:
 * (extended) wave - controls the servo to wave the left or right arm
 * (new) sleep - take a snap!
 
-![changes](https://github.com/fmanclossi/node-red-contrib-tjbotTwoArmsTwoLeds/blob/master/examples/Nodes%20changed.jpg)
+![changes](/examples/Nodes%20changed.jpg)
 
 # Examples
 
-![Faccina (little face)](https://github.com/fmanclossi/node-red-contrib-tjbotTwoArmsTwoLeds/blob/master/examples/Faccina_Alarm.mp4)
+<video>
+  <source src="/examples/Faccina_Alarm.mp4" type="video/mp4">
+</video>
+
+![Faccina (little face)](/examples/Faccina_Alarm.mp4)
 
 ... more examples will be available soon (I hope)
 
