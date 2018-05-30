@@ -20,6 +20,8 @@ Nodes include:
 * (extended) wave - controls the servo to wave the left or right arm
 * (new) sleep - take a snap!
 
+https://github.com/fmanclossi/node-red-contrib-tjbotTwoArmsTwoLeds/blob/master/examples/Nodes%20changed.jpg
+
 # Installation
 
 1-Install modified TJBot library as described in https://github.com/fmanclossi/tjbotTwoArmsTwoLEDs (to be enhanced). 
