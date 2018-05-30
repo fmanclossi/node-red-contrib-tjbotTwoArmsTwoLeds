@@ -24,9 +24,9 @@ Nodes include:
 
 # Examples
 
-<video>
-  <source src="/examples/Faccina_Alarm.mp4" type="video/mp4">
-</video>
+    <video>
+      <source src="/examples/Faccina_Alarm.mp4" type="video/mp4">
+    </video>
 
 ![Faccina (little face)](/examples/Faccina_Alarm.mp4)
 
