@@ -27,18 +27,23 @@ Nodes include:
 2-Upgrade Node-RED preinstalled with Raspbian Jessie using the command below.
 
 ``
+
 bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered)
+
 ``
 
 3-Setup Node-Red to run when the Pi boots up, run:
 
 ``
+
 sudo systemctl enable nodered.service
+
 ``
 
 4-Then, install TJBot nodes from EXPANDED TJBot Nodes repository:
 
 ``
+
 cd .node-red
 
 mkdir nodes
@@ -74,6 +79,7 @@ sudo nano /root/.node-red/settings.js. # Modify /root/.node-red/settings.js to p
 	httpStatic: ‘/home/pi/Desktop/httpStatic/’
 
 node-red-start
+
 ``
 
 # Contributions
