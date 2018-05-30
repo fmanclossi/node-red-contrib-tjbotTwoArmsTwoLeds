@@ -22,6 +22,12 @@ Nodes include:
 
 ![changes](https://github.com/fmanclossi/node-red-contrib-tjbotTwoArmsTwoLeds/blob/master/examples/Nodes%20changed.jpg)
 
+# Examples
+
+![Faccina (little face)](https://github.com/fmanclossi/node-red-contrib-tjbotTwoArmsTwoLeds/blob/master/examples/Faccina_Alarm.mp4)
+
+... more examples will be available soon (I hope)
+
 # Installation
 
 1-Install modified TJBot library as described in https://github.com/fmanclossi/tjbotTwoArmsTwoLEDs (to be enhanced). 
