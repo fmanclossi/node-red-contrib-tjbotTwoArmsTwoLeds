@@ -23,33 +23,56 @@ Nodes include:
 # Installation
 
 1-Install modified TJBot library as described in https://github.com/fmanclossi/tjbotTwoArmsTwoLEDs (to be enhanced). 
+
 2-Upgrade Node-RED preinstalled with Raspbian Jessie using the command below.
+
 ``
 bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered)
 ``
+
 3-Setup Node-Red to run when the Pi boots up, run:
+
 ``
 sudo systemctl enable nodered.service
 ``
+
 4-Then, install TJBot nodes from EXPANDED TJBot Nodes repository:
+
 ``
 cd .node-red
+
 mkdir nodes
+
 cd nodes
+
 git clone https://github.com/fmanclossi/node-red-contrib-tjbotTwoArmsTwoLeds
+
 cd node-red-contrib-tjbotTwoArmsTwoLeds
+
 npm install
+
 mv  node_modules/tjbot/lib/tjbot.js node_modules/tjbot/lib/tjbot.js.orig #just in case you want to go back to official distro
+
 cp /home/pi/Desktop/tjbotTwoArmsTwoLEDs/lib/tjbot.js node_modules/tjbot/lib/ #change path if it’s not on Desktop
+
 sudo nano /lib/systemd/system/nodered.service # some TJBot actions has to run as root so change User from pi to root
+
 sudo systemctl daemon-reload
+
 node-red-start # check node-red environment. Settings file should be at /root/.node-red/settings.js 
+
 node-red-stop
+
 mkdir /home/pi/Desktop/httpStatic # place to host static content from top level URL
+
 sudo nano /root/.node-red/settings.js. # Modify /root/.node-red/settings.js to point to the original Node-RED directory uncommenting and setting userDir and nodesDir variables as 
+
 	userDir: '/home/pi/.node-red/’,
+
 	nodesDir: '/home/pi/.node-red/nodes’,
-		httpStatic: ‘/home/pi/Desktop/httpStatic/’
+
+	httpStatic: ‘/home/pi/Desktop/httpStatic/’
+
 node-red-start
 ``
 
