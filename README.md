@@ -24,9 +24,9 @@ Nodes include:
 
 # Examples
 
-![Faccina (little face)](/examples/Faccina_Alarm.mp4)
+![Faccina (little face)](/examples/Faccina_Alarm.mp4) - HC-SR04 Ultrasonic sensor is managed by node-red-node-pisrf available in Node-Red palette (it requires Physical PINs values, not GPIO). Could be useful to install node-red-contrib-camerapi, too.
 
-... more examples will be available soon (I hope)
+... more examples will be available soon :)
 
 # Installation
 
