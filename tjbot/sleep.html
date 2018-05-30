@@ -1,0 +1,65 @@
+<!--
+#***************************************************************************
+# Copyright 2017 IBM
+#
+#   TJBot Nodes for Node-RED
+#
+#   By Ferruccio Manclossi (ferruccio_manclossi@it.ibm.com) extending JeanCarl Bisson (@dothewww) works
+#   More info: https://ibm.biz/node-red-contrib-tjbot
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#***************************************************************************
+-->
+<script type="text/javascript">
+  RED.nodes.registerType("tjbot-sleep",{
+    category: "TJBot",
+    color: "#D2B48C",
+    defaults: {
+      botId: {type: "tjbot-config"},
+      sleeptime: {value: "1000"},
+    },
+    inputs: 1,
+    outputs: 1,
+    paletteLabel: "sleep",
+    icon: "sleep.png",
+    align: "right",
+    label: function() {
+      return this.name||"Time to sleep: "+this.sleeptime;
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="tjbot-sleep">
+  <div class="form-row">
+    <label for="node-input-botId"><i class="fa fa-user"></i> Bot:</label>
+    <select id="node-input-botId">
+    </select>
+  </div>
+  <div class="form-row" id="sleeptime">
+    <label for="node-input-sleeptime"><i class="fa fa-clock-o"></i> sleeptime:</label>
+    <input type="number" min="0" max="1000000000" step="100" id="node-input-sleeptime" />
+  </div>
+
+<script type="text/x-red" data-help-name="tjbot-sleep">
+  <p>Make TJBot take a snap</p>
+
+  <h3>Inputs</h3>
+  <dl class="message-properties">
+    <dt class="optional">sleeptime
+      <span class="property-type">number</span>
+    </dt>
+    <dd>the length of time in milliseconds to sleep</dd>
+   </dl>
+
+  <h3>Details</h3>
+  <p>Just set sleep duration in milliseconds.</p>
+</script>

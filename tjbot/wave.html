@@ -1,0 +1,92 @@
+<!--
+#***************************************************************************
+# Copyright 2017 IBM
+#
+#   TJBot Nodes for Node-RED
+#
+#   By JeanCarl Bisson (@dothewww)
+#   More info: https://ibm.biz/node-red-contrib-tjbot
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#***************************************************************************
+-->
+<script type="text/javascript">
+  RED.nodes.registerType("tjbot-wave",{
+    category: "TJBot",
+    color: "#D2B48C",
+    defaults: {
+      botId: {type: "tjbot-config"},
+      arm: {value:"singleArm"},
+      motion: {value:"wave"},
+      name: {value: ""}
+    },
+    inputs: 1,
+    paletteLabel: "wave",
+    icon: "bridge.png",
+    align: "right",
+    label: function() {
+      return this.name||"Wave";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="tjbot-wave">
+  <div class="form-row">
+    <label for="node-input-botId"><i class="fa fa-user"></i> Bot:</label>
+    <select id="node-input-botId">
+    </select>
+  </div>
+  <div class="form-row">
+    <label for="node-input-arm"><i class="fa fa-arm"></i> Arm:</label>
+    <select id="node-input-arm">
+<!--      <option value="singleArm">Standard TJBot single Arm</option> -->
+      <option value="leftArm">Left Arm</option>
+      <option value="rightArm">Right Arm</option>
+      <option value="msg.arm">-- set msg.arm --</option>
+    </select>
+  </div>
+  <div class="form-row">
+    <label for="node-input-motion"><i class="fa fa-gear"></i> Motion:</label>
+    <select id="node-input-motion">
+      <option value="wave">Wave</option>
+      <option value="armback">Arm Back</option>
+      <option value="lowerarm">Lower Arm</option>
+      <option value="raisearm">Raise Arm</option>
+      <option value="msg.motion">-- set msg.motion --</option>
+    </select>
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="tjbot-wave">
+  <p>Make TJBot wave</p>
+
+  <h3>Inputs</h3>
+  <dl class="message-properties">
+    <dt class="optional">arm
+      <span class="property-type">string</span>
+    </dt>
+    <dt class="optional">motion
+      <span class="property-type">string</span>
+    </dt>
+    <dd>the arm selected</dd>
+    <dd>the motion the arm should make, or position to move to: wave, armback, raisearm, lowerarm</dd>
+  </dl>
+
+  <h3>Details</h3>
+  <p>The arm (left or right) can be set by <code>msg.arm</code> (case insensitive).</p>
+  <p>The motion (wave) or position of the arm (armback, lowerarm, and raisearm) can be set by <code>msg.motion</code> (case insensitive).</p>
+  <p>Note: This node requires that a servo is connected to the TJBot and that the option is check in the TJBot configuration.</p>
+</script>
