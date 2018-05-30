@@ -1,9 +1,9 @@
 # Node-RED nodes for TJBot with two arms and 2 LEDs
 
 Node-RED nodes that can be used with a modified TJBot running on a Raspberry Pi.
-This project extends the excellent work performed by TJBot team (https://github.com/ibmtjbot/tjbot) and by JeanCarl Besson (https://github.com/jeancarl/node-red-contrib-tjbot).
+This project extends the excellent work performed by ![TJBot team](https://github.com/ibmtjbot/tjbot) and ![JeanCarl Besson](https://github.com/jeancarl/node-red-contrib-tjbot).
 
-This nodes require https://github.com/fmanclossi/tjbotTwoArmsTwoLEDs modified library for TJBot woth two arms and two LEDs.
+This nodes require https://github.com/fmanclossi/tjbotTwoArmsTwoLEDs (a modified library for TJBot with two arms and two LEDs).
 
 Please follow (uncomfortable) install instructions.
 
