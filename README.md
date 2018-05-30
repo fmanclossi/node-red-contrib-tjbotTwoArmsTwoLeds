@@ -24,10 +24,6 @@ Nodes include:
 
 # Examples
 
-    <video>
-      <source src="/examples/Faccina_Alarm.mp4" type="video/mp4">
-    </video>
-
 ![Faccina (little face)](/examples/Faccina_Alarm.mp4)
 
 ... more examples will be available soon (I hope)
